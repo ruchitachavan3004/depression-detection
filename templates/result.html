@@ -1,0 +1,43 @@
+{% extends "userlayout.html" %}
+{% block content %}
+
+<img src="static/images/bgImage.jpg" alt="Car" style="width:100%">
+
+    <div class="w3-card-4 w3-margin">
+
+        <header class="w3-container w3-blue">
+          <h1>Depression result</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>
+             {{ depression }}
+	</p>
+        </div>
+        
+        <footer class="w3-container w3-blue">
+          <h5></h5>
+        </footer>
+        
+        </div>
+
+        <div class="w3-card-4 w3-margin">
+
+            <header class="w3-container w3-blue">
+              <h1>Depression Score</h1>
+            </header>
+            
+            <div class="w3-container">
+              <p>
+                {{ score }}	</p>
+            </div>
+            
+            <footer class="w3-container w3-blue">
+              <h5></h5>
+            </footer>
+            
+            </div>
+
+
+
+{% endblock %}
