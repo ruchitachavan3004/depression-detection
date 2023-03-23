@@ -14,6 +14,7 @@ import pandas as pd
 from datetime import datetime
 from autocorrect import Speller
 
+#initialize veriable
 interest=''
 problem=''
 text_dep = 0
@@ -23,19 +24,23 @@ num = ''
 
 spell = Speller(lang='en')
 
+#create an instance of flask
 app = Flask(__name__)
 
-app.secret_key = '1234'
-app.config["CACHE_TYPE"] = "null"
+app.secret_key = '1234'            #set a secret key for app
+app.config["CACHE_TYPE"] = "null"         
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+#define landing page route from home.html
 @app.route('/', methods=['GET', 'POST'])
 def landing():
 	return render_template('home.html')
 
+#define home page route
 @app.route('/home', methods=['GET', 'POST'])
 def home():
 	return render_template('home.html')
+#define input page route
 '''
 @app.route('/input', methods=['GET', 'POST'])
 def input():
@@ -88,7 +93,7 @@ def input():
 
 	return render_template('input.html')
 
-
+#define login page route
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	error = None
